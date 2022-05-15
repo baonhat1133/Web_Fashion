@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue";
+  
+}
+:root {
+  --text-color: yellow;
+  --bgr-header: rgb(99, 59, 201);
+  --sort-down: rgb(248, 188, 6);
+}
+.header1 {
+  background-color: rgb(99, 59, 201);
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 70px;
+  color: #fff;
+  
+}
+
+.header-left {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  align-items: center;
+}
+
+.header-center {
+  display: flex;
+  width: 30%;
+  justify-content: start;
+}
+.type-fashion {
+    display: flex;
+}
+.txt-type{
+    padding-right: 50px;
+}
+.txt-type-men:hover{
+    border-bottom: 2px solid yellow;
+}
+.txt-type-women:hover{
+    border-bottom: 2px solid yellow;
+}
+.txt-type-kids:hover{
+    border-bottom: 2px solid yellow;
+}
+.header-right {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.img-shop {
+  display: inline-block;
+  border: 3px solid rgb(153, 244, 8);
+  padding: 5px 3px;
+}
+
+.header-cart button {
+  padding: 5px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.header-cart button i {
+  margin-right: 5px;
+}
+
+.input-header {
+  display: flex;
+  margin-right: 20px; 
+}
+
+.input-header input {
+  height: 28px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
+.input-header i {
+  display: flex;
+  align-items: center;
+  color: black;
+  padding-right: 5px;
+  background-color: #fff;
+  border-radius: 0 8px 8px 0;
+}
+.ani-box{
+   margin-right: 25px;
+}
+.ani-effect {
+  position: relative;
+  width: 18px;
+  height: 10px;
+  background-color: yellow;
+  border-radius: 100%;
+  animation: aniEff 2s ease infinite;
+}
+.txt-effect {
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: yellow;
+  transform: translateY(-100%);
+}
+@keyframes aniEff {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+.txt-sort-down a i {
+  color: var(--sort-down);
+  margin-left: 3px;
+  padding: 10px 0;
+}
+.type-fashion {
+  display: flex;
+}
+
+
+.txt-type-kids{
+   position:relative;
+   
+}
+.txt-type-kids::after{
+    position:absolute;
+    content:"-50%";
+    text-align: center;
+    top:1px;
+    right:20px;
+    z-index: 1;
+    font-size: 13px;
+    width:45px;
+    height:15px;
+    background-color:red;
+    border-radius:5px;
+}
+.txt-type-kids::before{
+    position:absolute;
+    content:"";
+    right:50px;
+    top:6px;
+    width:10px;
+    height:10px;
+    transform:rotate(45deg);
+    background-color:red;
+} 
+/* ===============Survey============ */
+.survey-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.survey-form {
+  width: 400px;
+  height: 520px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+.survey-form form {
+  padding: 0 40px;
+}
+.survey-form h2 {
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.survey-form h2 i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+.survey-form form select {
+  margin-top: 20px;
+  display: block;
+  height: 40px;
+  width: 318px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.txt-survey {
+  display: block;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.survey-form form textarea {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.survey-form form button {
+  width: 80%;
+  height: 35px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgb(254, 123, 1);
+  cursor: pointer;
+}
+/* ==========sub-menu======== */
+/* .header-left ul li{
+    position: relative;
+}
+.sub-menu{
+    position:absolute;
+    background-color:var(--bgr-header);
+    width:150px;
+    height:180px;
+    transform:translateX(-31px);    
+    margin-top:100px;
+}
+.sub-menu ul{
+    display:flex;
+    flex-direction: column;
+  
+}
+
+.sub-menu ul li{
+    padding:0;
+    margin-right:0;
+}
+ */
