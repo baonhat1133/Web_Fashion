@@ -36,16 +36,16 @@
     display: flex;
 }
 .txt-type{
-    padding-right: 50px;
+    padding:0 25px;
 }
 .txt-type-men:hover{
-    border-bottom: 2px solid yellow;
+    background-color:rgba(0, 0, 0, 0.3);
 }
 .txt-type-women:hover{
-    border-bottom: 2px solid yellow;
+    background-color:rgba(0, 0, 0, 0.3);
 }
 .txt-type-kids:hover{
-    border-bottom: 2px solid yellow;
+    background-color:rgba(0, 0, 0, 0.3);
 }
 .header-right {
   width: 20%;
@@ -125,21 +125,21 @@ a {
   margin-left: 3px;
   padding: 10px 0;
 }
+.txt-sort-down a{
+  /* padding-left: 50px; */
+}
 .type-fashion {
   display: flex;
 }
-
-
 .txt-type-kids{
    position:relative;
-   
 }
 .txt-type-kids::after{
     position:absolute;
     content:"-50%";
     text-align: center;
     top:1px;
-    right:20px;
+    right:5px;
     z-index: 1;
     font-size: 13px;
     width:45px;
@@ -150,7 +150,7 @@ a {
 .txt-type-kids::before{
     position:absolute;
     content:"";
-    right:50px;
+    right:35px;
     top:6px;
     width:10px;
     height:10px;
@@ -226,7 +226,7 @@ a {
   cursor: pointer;
 }
 /* ==========sub-menu======== */
-/* .header-left ul li{
+.txt-type-men{
     position: relative;
 }
 .sub-menu{
@@ -234,17 +234,173 @@ a {
     background-color:var(--bgr-header);
     width:150px;
     height:180px;
-    transform:translateX(-31px);    
-    margin-top:100px;
-}
-.sub-menu ul{
-    display:flex;
-    flex-direction: column;
-  
+    margin-left: -25px;
+    display:none;
 }
 
 .sub-menu ul li{
-    padding:0;
-    margin-right:0;
+  list-style: none;
 }
- */
+.sub-menu ul li a{
+  padding-left: 10px;
+}
+.flex-sub{
+  position: relative;
+  display:flex;
+  justify-content: space-between;
+  left:0;
+}
+.flex-sub i{
+  padding-right: 10px;
+}
+.sub-menu ul li{
+border-bottom: 1px solid #fff;
+padding:10px 0px;
+}
+.sub-menu ul li:last-child{
+  border:none;
+  }
+.sub-menu ul li:hover{
+  background-color:rgba(255,255,255,0.2);
+}
+.sub-menu2{
+  position:absolute;
+  background-color:var(--bgr-header);
+  width:150px;
+  height:180px;
+  left:150px;
+  top:0px;
+  display:none;
+}
+
+.sub-menu2 ul li{
+  padding-left: 10px;
+}
+
+.sub-menu3{
+  position:absolute;
+  background-color:var(--bgr-header);
+  width:150px;
+  height:180px;
+  left:150px;
+  top:0px;
+  display:none;
+}
+
+.sub-menu3 ul li{
+  padding-left: 10px;
+}
+
+.sub-menu3 ul li{
+  padding-left: 10px;
+}
+
+/* =============women */
+
+.txt-type-women{
+  position: relative;
+}
+.sub-menu-women{
+  position:absolute;
+  background-color:var(--bgr-header);
+  width:150px;
+  height:180px;
+  margin-left: -25px;
+  display:none;
+}
+
+.sub-menu-women ul li{
+list-style: none;
+}
+.sub-menu-women ul li a{
+padding-left: 10px;
+}
+.sub-menu-women ul li{
+  border-bottom: 1px solid #fff;
+  padding:10px 0px;
+  }
+  .sub-menu-women ul li:last-child{
+    border:none;
+    }
+  .sub-menu-women ul li:hover{
+    background-color:rgba(255,255,255,0.2);
+  }
+  .sub-menu2-women{
+    position:absolute;
+    background-color:var(--bgr-header);
+    width:150px;
+    height:180px;
+    left:150px;
+    top:0px;
+    display:none;
+  }
+  
+  .sub-menu2-women ul li{
+    padding-left: 10px;
+  }
+/* ==============Kids */
+.txt-type-kids{
+  position: relative;
+}
+.sub-menu-kids{
+  position:absolute;
+  background-color:var(--bgr-header);
+  width:150px;
+  height:180px;
+  margin-left: -25px;
+  display:none;
+}
+.sub-menu-kids ul li{
+list-style: none;
+}
+.sub-menu-kids ul li a{
+padding-left: 10px;
+}
+.sub-menu-kids ul li{
+  border-bottom: 1px solid #fff;
+  padding:10px 0px;
+  }
+  .sub-menu-kids ul li:last-child{
+    border:none;
+    }
+  .sub-menu-kids ul li:hover{
+    background-color:rgba(255,255,255,0.2);
+  }
+  .sub-menu2-kids{
+    position:absolute;
+    background-color:var(--bgr-header);
+    width:150px;
+    height:180px;
+    left:150px;
+    top:0px;
+    display:none;
+  }
+  .sub-menu2-kids ul li{
+    padding-left: 10px;
+  }
+
+  /* ================================Dropdown_hover */
+.txt-type-men:hover .sub-menu{
+  display: block;
+}
+.flex-sub2:hover .sub-menu2{
+  display: block;
+}
+.flex-sub3:hover .sub-menu3{
+  display: block;
+}
+
+.txt-type-women:hover .sub-menu-women{
+  display: block;
+}
+.flex-sub2-women:hover .sub-menu2-women{
+  display: block;
+}
+
+.txt-type-kids:hover .sub-menu-kids{
+  display: block;
+}
+.flex-sub2-kids:hover .sub-menu2-kids{
+  display: block;
+}
+/* ================================================== */
