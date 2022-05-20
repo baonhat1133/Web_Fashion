@@ -97,6 +97,7 @@ a {
   height: 28px;
   border: none;
   border-radius: 8px 0 0 8px;
+  padding:2px 7px;
   outline: none;
 }
 .input-header i {
@@ -730,4 +731,104 @@ main {
   margin-bottom: 10px;
   font-weight:bold;
   border-bottom: 1px solid rgb(0, 0, 0);
+}
+/* Footer */
+.subscribe{
+  background-image:url(../image/theme2.PNG);
+  width: 100%;
+  height: 150px;
+}
+.subscribe-email{
+  width:88%;
+  margin:0 auto;
+  display: flex;
+  transform: translateY(60%);
+  color:white;
+}
+.txt-subscribe{
+  width: 50%;
+  font-size: 30px;
+  display: flex;
+  align-items:center;
+  justify-content:start;
+  font-weight:bold;
+}
+.subscribe-email-content{
+  display: flex;
+  width: 50%;
+  align-items:center;
+  justify-content:end;
+}
+.subscribe-email-content input{
+  font-size:18px;
+  padding:11px 10px;
+}
+.subscribe-email-content button{
+  outline: none;
+  border: none;
+  padding:12px 10px;
+  padding-bottom: 13px;
+  display: flex;
+  align-items:center;
+  background-color:var(--bgr-header);
+  color: #fff;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+.contact-info{
+  background-color: var(--bgr-header);
+  width:100%;
+  height:200px;
+}
+.contact-info-content{
+  width:88%;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between;
+}
+
+.left-footer{
+  width:35%;
+}
+
+.left-footer-ct{
+  margin-top: 29px;
+  color:white;
+}
+.icon-contact i{
+  margin-right: 15px;
+}
+.right-footer{
+  width:50%;
+  display: flex;
+  justify-content:space-between;
+  margin-top: 30px;
+}
+.direct-contract-info p{
+  color:white;
+}
+.right-footer h3{
+  color:white;
+  font-weight:bold;
+  margin-bottom: 15px;
+}
+.contract-right-icon{
+  display: flex;
+  align-items:center;
+  color:white;
+  margin-bottom: 15px;
+}
+.contract-right-icon i{
+  font-size:15px;
+  margin-right: 5px;
+  border: 1px solid white;
+  padding:5px;
+  border-radius:100%;
+}
+.contract-address i{
+  margin-right: 8px;
+}
+.right-footer a{
+  line-height:25px;
 }
