@@ -46,9 +46,10 @@ setInterval(()=>{
     titleLi[index].classList.add('active');
 },3000)
 
-//Button more
-const btnMore=document.querySelector('.btn-more');
-btnMore.addEventListener('click',()=>{
-    document.querySelector('.content-bestsell-more').style.display="block";
-    btnMore.style.display="none";
-})
+// //Button more
+// const btnMore=document.querySelector('.btn-more');
+// btnMore.addEventListener('click',()=>{
+//     document.querySelector('.content-bestsell-more').style.display="block";
+//     btnMore.style.display="none";
+// })
+

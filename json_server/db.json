@@ -1,0 +1,91 @@
+{
+    "bestsellProduct":[
+        {
+            "id":1,
+            "discount":-10,
+            "name":"Áo đầm tay ngắn",
+            "price":495000,
+            "image":"./image/prd1.jpg"
+        },
+        {
+            "id":2,
+            "discount":-20,
+            "name":"Quần jeans dài",
+            "price":400000,
+            "image":"../image/prd2.jpg"
+        },
+        {
+            "id":3,
+            "discount":-10,
+            "name":"Áo đầm tay ngắn màu sáng",
+            "price":405000,
+            "image":"./image/prd3.jpg"
+        },
+        {
+            "id":4,
+            "discount":-30,
+            "name":"Quần jeans dài màu sẫm",
+            "price":245000,
+            "image":"./image/prd4.jpg"
+        },
+        {
+            "id":5,
+            "discount":-10,
+            "name":"Áo đầm tay ngắn",
+            "price":405000,
+            "image":"./image/prd5.jpg"
+        },
+        {
+            "id":6,
+            "discount":-30,
+            "name":"Quần jeans dài",
+            "price":245000,
+            "image":"./image/prd6.jpg"
+        },
+        {
+            "id":7,
+            "discount":-10,
+            "name":"Áo jeans dài đen",
+            "price":405000,
+            "image":"./image/prd7.jpg"
+        },
+        {
+            "id":8,
+            "discount":-30,
+            "name":"Áo jeans dài nâu",
+            "price":245000,
+            "image":"./image/prd8.jpg"
+        }
+    
+    ],
+    "newProduct":[
+        {
+            "id":9,
+            "discount":-10,
+            "name":"Áo đầm tay ngắn đen",
+            "price":360000,
+            "image":"./image/bestsell1.jpg"
+        },
+        {
+            "id":10,
+            "discount":0,
+            "name":"Quần jeans dài nam",
+            "price":300000,
+            "image":"./image/bestsell2.jpg"
+        },
+        {
+            "id":11,
+            "discount":-10,
+            "name":"Áo đầm tay ngắn",
+            "price":450000,
+            "image":"./image/bestsell3.jpg"
+        },
+        {
+            "id":12,
+            "discount":0,
+            "name":"Quần short áo ngắn tay",
+            "price":280000,
+            "image":"./image/bestsell4.jpg"
+        }
+    ]
+}

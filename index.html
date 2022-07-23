@@ -42,7 +42,7 @@
                                     <option value="">33 trở lên</option>
                                 </select>
                                 <label class="txt-survey">*Đánh giá về chúng tôi:</label>
-                                <textarea rows="8" cols="37"></textarea>
+                                <textarea rows="8" cols="35" style="padding:10px 8px;"></textarea>
                                 <button>XÁC NHẬN</button>
                             </form>
                         </div>
@@ -137,7 +137,10 @@
                    </div>
                 </div>
                 <div class="header-right">
-                    <div class="header-cart"><a href="#"><button><i class="fas fa-cart-arrow-down"></i>Giỏ hàng</button></a></div>
+                    <div class="header-cart"><a href="#">
+                        <button><i class="fas fa-cart-arrow-down"></i>Giỏ hàng</button>
+                        <div id="quantity-addcart">1</div>
+                     </a></div>
                     <div><i class="fas fa-bell"></i></div>
                     <div><i class="fas fa-globe"></i></div>
                     <div><i class="fas fa-user-circle"></i></div>
@@ -196,137 +199,25 @@
             <div class="content-bestsell">
                
                 <div class="content-bestsell-product">
-                       <ul>
-                            <li>
+                       <ul class="bestsell-products">
+                            <!-- <li>
                                 <div class="img-product">
-                                    <img src="./image/prd1.jpg" alt="prd1"> 
-                                    <p>-10%</p>
+                                    <img src="${product.image}" alt="${product.id}"> 
+                                    <p>${product.discount}%</p>
                                     <button>Add Cart</button>
                                 </div>
                                 <div class="txt-product">
-                                    <h3>Áo đầm tay ngắn</h3>
+                                    <h3>${product.name}</h3>
                                     <div class="price-product">
-                                        <p class="current-price">495.000 <sup>đ</sup></p>
-                                        <p style="text-decoration: line-through;">550.000 <sup>đ</sup></p>
+                                        <p class="current-price">${product.price} <sup>đ</sup></p>
+                                        <p style="text-decoration: line-through;">${product.price*(1+(product.discount)/100)} <sup>đ</sup></p>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li>
-                                <div class="img-product">
-                                    <img src="./image/prd2.jpg" alt="prd2"> 
-                                    <p>-20%</p>
-                                    <button>Add Cart</button>
-                                </div>
-                                <div class="txt-product">
-                                    <h3>Quần jeans dài</h3>
-                                    <div class="price-product">
-                                        <p class="current-price">400.000 <sup>đ</sup></p>
-                                        <p style="text-decoration: line-through;">500.000 <sup>đ</sup></p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="img-product">
-                                    <img src="./image/prd3.jpg" alt="prd3"> 
-                                    <p>-10%</p>
-                                    <button>Add Cart</button>
-                                </div>
-                                <div class="txt-product">
-                                    <h3>Áo đầm tay ngắn màu sáng</h3>
-                                    <div class="price-product">
-                                        <p class="current-price">405.000 <sup>đ</sup></p>
-                                        <p style="text-decoration: line-through;">450.000 <sup>đ</sup></p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="img-product">
-                                    <img src="./image/prd4.jpg" alt="prd4"> 
-                                    <p>-30%</p>
-                                    <button>Add Cart</button>
-                                </div>
-                                <div class="txt-product">
-                                    <h3>Quần jeans dài màu sẫm</h3>
-                                    <div class="price-product">
-                                        <p class="current-price">245.000 <sup>đ</sup></p>
-                                        <p style="text-decoration: line-through;"> 350.000<sup>đ</sup></p>
-                                    </div>
-                                </div>
-                            </li>
-                            <!--  -->
+                            </li> -->
                         </ul>
-                        
                 </div>
-
-                <div class="btn-more">
-                    <button>Xem Thêm</button>
-                </div>
-                <div class="content-bestsell-product content-bestsell-more" style="display:none">
-                    <ul>
-                        <li>
-                            <div class="img-product">
-                                <img src="./image/prd5.jpg" alt="prd3"> 
-                                <p>-10%</p>
-                                <button>Add Cart</button>
-                            </div>
-                            <div class="txt-product">
-                                <h3>Áo đầm tay ngắn</h3>
-                                <div class="price-product">
-                                    <p class="current-price">405.000 <sup>đ</sup></p>
-                                    <p style="text-decoration: line-through;">450.000 <sup>đ</sup></p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="img-product">
-                                <img src="./image/prd6.jpg" alt="prd4"> 
-                                <p>-30%</p>
-                                <button>Add Cart</button>
-                            </div>
-                            <div class="txt-product">
-                                <h3>Quần jeans dài</h3>
-                                <div class="price-product">
-                                    <p class="current-price">245.000 <sup>đ</sup></p>
-                                    <p style="text-decoration: line-through;"> 350.000<sup>đ</sup></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-product">
-                                <img src="./image/prd7.jpg" alt="prd3"> 
-                                <p>-10%</p>
-                                <button>Add Cart</button>
-                            </div>
-                            <div class="txt-product">
-                                <h3>Áo jeans dài đen</h3>
-                                <div class="price-product">
-                                    <p class="current-price">405.000 <sup>đ</sup></p>
-                                    <p style="text-decoration: line-through;">450.000 <sup>đ</sup></p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="img-product">
-                                <img src="./image/prd8.jpg" alt="prd4"> 
-                                <p>-30%</p>
-                                <button>Add Cart</button>
-                            </div>
-                            <div class="txt-product">
-                                <h3>Áo jeans dài nâu</h3>
-                                <div class="price-product">
-                                    <p class="current-price">245.000 <sup>đ</sup></p>
-                                    <p style="text-decoration: line-through;"> 350.000<sup>đ</sup></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-        </div>
+            </div>
+            
         <div class="title-bestsell title-new">
             <div class="title-txt">
                 <h2>Sản Phẩm Mới</h2>
@@ -339,8 +230,8 @@
             <div class="content-bestsell">
                
                 <div class="content-bestsell-product">
-                       <ul>
-                            <li>
+                       <ul class="new-products">
+                            <!-- <li>
                                 <div class="img-product">
                                     <img src="./image/bestsell1.jpg" alt="prd1"> 
                                     <p>-10%</p>
@@ -354,47 +245,7 @@
                                     </div>
                                 </div>
                             </li>
-
-                            <li>
-                                <div class="img-product">
-                                    <img src="./image/bestsell2.jpg" alt="prd2"> 
-                                    <button>Add Cart</button>
-                                </div>
-                                <div class="txt-product">
-                                    <h3>Quần jeans dài nam</h3>
-                                    <div class="price-product">
-                                        <p class="current-price">300.000 <sup>đ</sup></p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="img-product">
-                                    <img src="./image/bestsell3.jpg" alt="prd3"> 
-                                    <p>-10%</p>
-                                    <button>Add Cart</button>
-                                </div>
-                                <div class="txt-product">
-                                    <h3>Áo đầm tay ngắn</h3>
-                                    <div class="price-product">
-                                        <p class="current-price">450.000 <sup>đ</sup></p>
-                                        <p style="text-decoration: line-through;">500.000 <sup>đ</sup></p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="img-product">
-                                    <img src="./image/bestsell4.jpg" alt="prd4"> 
-                                    <button>Add Cart</button>
-                                </div>
-                                <div class="txt-product">
-                                    <h3>Quần short áo ngắn tay</h3>
-                                    <div class="price-product">
-                                        <p class="current-price">280.000 <sup>đ</sup></p>
-                                    </div>
-                                </div>
-                            </li>
-                            <!--  -->
+                           -->
                         </ul>
                 </div>
         </div>
@@ -508,6 +359,8 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="./js/data.js"></script> -->
+    <script src="./TsToJs/layout/index.js" type = "module"></script>
     <script src="./js/layout.js"></script>
 </body>
 </html>

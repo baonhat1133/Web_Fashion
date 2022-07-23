@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "outDir": "TsToJs",
+        "watch":true,
+        "target": "es6"
+    },
+    "exclude":[
+        "js"
+    ]
+}
