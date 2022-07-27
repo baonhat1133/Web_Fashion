@@ -13,10 +13,7 @@
 li{
   list-style: none;
 }
-/* img{
-  width:60%;
-  height:150px;
-} */
+
 header{
   position:fixed;
   top:0;
@@ -30,13 +27,15 @@ header{
 .container {
   display: flex;
   align-items: center;
-  margin: 0 70px;
+  /* margin: 0 70px; */
+  width:88%;
+  margin: 0 auto;
   color: #fff;
 }
 
 .header-left {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 50%;
   align-items: center;
 }
@@ -65,13 +64,16 @@ header{
 .header-right {
   width: 20%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-a {
+.header1 a {
   text-decoration: none;
   color: #fff;
+}
+a{
+  text-decoration: none;
 }
 .img-shop {
   display: inline-block;
@@ -87,7 +89,20 @@ a {
 .header-cart button i {
   margin-right: 5px;
 }
-
+.header-cart a{
+    position: relative;
+  }
+  #quantity-addcart{
+    content: "ha";
+    font-size:10px;
+    padding:0px 5px;
+    color: #fff;
+    background-color: red;
+    border-radius:100%;
+    position:absolute;
+    top:-6px;
+    right: -8px;
+  }
 .input-header {
   display: flex;
   margin-right: 20px; 
@@ -425,11 +440,12 @@ padding-left: 10px;
   display: block;
 }
 
-
+/* ok */
 /* ================================================== */
 main {
   max-width: 88%;
   margin: 0 auto;
+
 }
 .slider{
   margin-top:50px;
@@ -561,6 +577,7 @@ main {
 .title-bestsell{
  
 }
+
 .title-txt{
   font-size:25px;
   font-weight: bold;
@@ -600,7 +617,6 @@ main {
 } */
 .content-bestsell-product ul{
   width:100%;
-  height:500px;
   display:flex;
   flex-wrap: wrap;
   flex-grow: 1;
@@ -608,6 +624,7 @@ main {
 }
 .content-bestsell-product ul li{
   width:23%;
+  margin-bottom:60px;
 }
 .content-bestsell-product ul li img{
   width:100%;

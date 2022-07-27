@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "mjs",
+        "module": "es2015",
+        "watch":true,
+        "target": "es6",
+    },
+    "exclude":[
+        "js",
+        "node_modules"
+    ]
+}
