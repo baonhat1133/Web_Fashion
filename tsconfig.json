@@ -1,10 +1,12 @@
 {
     "compilerOptions": {
-        "outDir": "TsToJs",
+        "outDir": "mjs",
+        "module": "es2015",
         "watch":true,
-        "target": "es6"
+        "target": "es6",
     },
     "exclude":[
-        "js"
+        "js",
+        "node_modules"
     ]
 }

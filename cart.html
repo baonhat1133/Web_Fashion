@@ -138,7 +138,9 @@
                     <div class="header-right">
                         <div class="header-cart"><a href="#">
                                 <button><i class="fas fa-cart-arrow-down"></i>Giỏ hàng</button>
-                                <div id="quantity-addcart">1</div>
+                                <div class="quantity-cart">
+                                    <div id="quantity-addcart">0</div>
+                                </div>
                         </a></div>
                         <div><i class="fas fa-bell"></i></div>
                         <div><i class="fas fa-globe"></i></div>
@@ -169,57 +171,14 @@
                         </div>
                         <div class="content-left-cart">
                                 <div class="list-product-cart">
-                                    <!-- <div class="product-cart">
-                                        <img src="./image/prd1.jpg" alt="">
-                                        <div class="name-product">
-                                            <p>Áo đầm tay ngắn</p>
-                                        </div>
-                                        <div class="input-amount">
-                                            <button class="btn-state decrease">-</button>
-                                            <input name="" value="1" min="1">
-                                            <button class="btn-state increase">+</button>
-                                        </div>
-                                        <div class="price-product">
-                                            <p style="font-weight:bold;">495.000đ</p>
-                                            <del style="color:rgb(131, 131, 131);">550.000đ</del>
-                                            <p style="color:rgb(131, 131, 131);">Giảm 10%</p>
-                                        </div>
-                                        <div class="pay-money">
-                                            <p>Thành tiền:</p>
-                                            <span style="color:rgb(151, 8, 8);font-weight:bold; ">495.000đ</span>
-                                        </div>
-                                        <div class="delete-product">
-                                            <button type="text">Delete</button>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="update-list-product">
-                                    <button type="submit" class="update-product-cart">CẬP NHẬT GIỎ HÀNG</button>
+                                    <!-- Load data -->
+                                    
                                 </div>
                         </div>
                 </div>
                 <div class="right-cart">
-                  <div class="content-right-cart">
-                        <h4>Thông tin đơn hàng</h4>
-                        <div class="temp-money">
-                            <p class="txt-m-ord">Tạm tính:</p>
-                            <p >990.000đ</p>
-                        </div>
-                        <div class="fee-ship ">
-                            <p class="txt-m-ord">Phí vận chuyển:</p>
-                            <p>Miễn phí (nhỏ hơn 400k)</p>
-                        </div>
-                        <div class="note-ship">
-                            <span><i class="fas fa-shipping-fast"></i> Đơn hàng từ 400,000đ của bạn được miễn phí giao hàng. Cảm ơn bạn đã ủng hộ BNShop!</span>
-                        </div>
-                        <div class="total-payment">
-                            <p class="txt-m-ord">Tổng tiền:</p>
-                            <p>990.000đ</p>
-                        </div>
-                        <div class="btn-payment">
-                            <button type="text">THANH TOÁN</button>
-                        </div>
-                  </div>
+                    <!--info payment -->
+                  
                 </div>
             </div>
         </div>
@@ -337,8 +296,6 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="./js/layout.js"></script> -->
-    <!-- <script src="./TsToJs/data/handleData.js"></script> -->
-    <script src="./TsToJs/layout/cart.js"></script>
+    <script src="./mjs/Home_Cart/cart.js" type="module"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
-// import {addlocal,getlocal} from "../data/handleData"
-import { Product } from "../Interface/Product";
-import { cartProduct } from "../Interface/cartProduct";
-import {addlocal,getlocal} from "../data/handleData"
+import { Product,cartProduct  } from "../Product/Product.js";
+import {addlocal,getlocal,addlocalTotalPrd,getlocalTotalPrd} from "../localStorage/handleData.js";
+
 //load data from fake API
 var bestsellPrdAPI:string="http://localhost:3000/bestsellProduct";
 getBestsellPrd(function(dataBest):void{
@@ -23,7 +22,7 @@ function renderBestPrd(product){
             <div class="img-product">
                 <img src="${product.image}" alt="${product.id}"> 
                 <p>${product.discount}%</p>
-                <button class="addlocal" idProduct=${product.id}>Add Cart</button>
+                <button class="addlocal" idProduct=${product.id} >Add Cart</button>
             </div>
             <div class="txt-product">
                 <h3>${product.name}</h3>
@@ -35,7 +34,8 @@ function renderBestPrd(product){
         </li> `;
     })
     bestsellPrds.innerHTML=htmls.join('');
-    clickEventAddCart(product);
+    clickEventAddCart(product,"best");
+
 }
 
 
@@ -58,7 +58,7 @@ function renderNewPrd(product){
                 <div class="img-product">
                     <img src="${product.image}" alt="${product.id}"> 
                     <p>${product.discount}%</p>
-                    <button class="addlocal" idProduct=${product.id}>Add Cart</button>
+                    <button class="addlocal" idProduct=${product.id} >Add Cart</button>
                 </div>
                 <div class="txt-product">
                     <h3>${product.name}</h3>
@@ -87,9 +87,61 @@ function renderNewPrd(product){
         
     })
     newProducts.innerHTML =htmls.join('');
-    clickEventAddCart(product);
+    clickEventAddCart(product,"new");
+    updateCartItem();
 }
-
-
-
-
+//Add Cart
+var listCartClick:cartProduct[]=getlocal();
+function clickEventAddCart(product:Product[],state:string){
+    const addPrdLocal:HTMLCollection=document.getElementsByClassName("addlocal");
+    for(let btn of addPrdLocal){
+        btn.addEventListener("click",()=>{
+            const idProduct=Number(btn.getAttribute("idProduct"));
+            // listCartClick=[] 
+            if(idProduct<=8 && state==="best"){
+                addProductLocal(product,idProduct);
+                totalPrdCart(listCartClick);
+            }
+            else if(idProduct>8 && state==="new"){
+                addProductLocal(product,idProduct);
+                totalPrdCart(listCartClick);
+            }
+            updateCartItem();
+        })
+    }
+}
+var indexPrd:number=-1;
+function addProductLocal(product:Product[],id){
+    let productCart:cartProduct;
+    indexPrd=listCartClick.findIndex(
+        (product)=>id===product.id
+    );
+    if(indexPrd!== -1){
+        listCartClick[indexPrd].quantity++;
+        addlocal(listCartClick);
+    }
+    else{
+        product.forEach((product:Product)=>{
+            if(id===product.id){
+                    productCart={
+                        ...product,
+                        quantity:1
+                    }
+                    listCartClick.push(productCart);
+                addlocal(listCartClick);
+            }
+        })
+    }
+}
+export function totalPrdCart(listCartClick):number{
+    var totalPrd:number=listCartClick.reduce((total,product,i)=>{
+        console.log(i,total,product.quantity);
+        return total+product.quantity;
+    },0)
+    addlocalTotalPrd(totalPrd);
+    updateCartItem();
+    return totalPrd;
+}
+function updateCartItem(){
+    document.querySelector(".quantity-cart").innerHTML=`<div id="quantity-addcart">${getlocalTotalPrd()}</div>`;
+}
