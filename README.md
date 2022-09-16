@@ -1,4 +1,4 @@
-# Web_Fashion
+# Web_Fashion (Dự án tự học cá nhân)
 
 #Đầu tiên, dữ liệu thông tin sản phẩm được lưu vào file db.json trong thư mục json_server<br>
 Mục đích để fake API. Để chạy dự án:<br>
